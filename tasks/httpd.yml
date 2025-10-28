@@ -1,0 +1,15 @@
+---
+    - name: Install Apache
+      yum: 
+        name: httpd
+        state: latest
+    
+    - name: Start Apache
+      service: 
+        name: httpd
+        state: started
+
+    - name: cp index.html from s3
+      command: aws s3 cp  {{ s3 }} {{ destination_path }}
+        
+    

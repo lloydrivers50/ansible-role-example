@@ -1,0 +1,5 @@
+---
+# defaults file for ansible-role-httpd-server
+
+s3: s3://devops-onboarding-project/index.html
+destination_path: /var/www/html
